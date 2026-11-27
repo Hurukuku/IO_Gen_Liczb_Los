@@ -1,4 +1,7 @@
-"""Punkt wejścia aplikacji API.
+from fastapi import FastAPI
 
-TODO (Szkielet API): utworzenie aplikacji i podpięcie routerów.
-"""
+from app.api.routes import hello
+
+app = FastAPI(title="Generator liczb losowych API")
+
+app.include_router(hello.router)
