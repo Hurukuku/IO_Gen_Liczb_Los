@@ -1,4 +1,4 @@
-def blum_blum_shub(p1: int, p2: int, seed: int, iter: int):
+def blum_blum_shub(seed: int, iter: int, p1 = 5801, p2 = 6521):
     n = p1 * p2
     numbers = []
     for i in range(iter):
@@ -9,4 +9,4 @@ def blum_blum_shub(p1: int, p2: int, seed: int, iter: int):
         numbers.append(seed)
     return numbers
 
-print(blum_blum_shub(5801, 6521, 7, 100))
+print(blum_blum_shub(7, 100))
